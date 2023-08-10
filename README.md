@@ -1,6 +1,6 @@
 # simple-car-registration-detail
--Register Owner Car For His Own View
--Allow Owner To View All His/Her Car
+- Register Owner Car For His Own View
+- Allow Owner To View All His/Her Car
 
 # installation step
 cd simple-car-registration-detail
