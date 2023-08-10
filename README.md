@@ -3,11 +3,11 @@
 - Allow Owner To View All His/Her Car
 
 # installation step
-cd simple-car-registration-detail
-pipenv shell
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver 0.0.0.0:8000
+- cd simple-car-registration-detail
+- pipenv shell
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py runserver 0.0.0.0:8000
 
 # additional detail
 - Created using Django version 4.2.4
