@@ -9,5 +9,41 @@
 <body>
     {% block body %}
     {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("aaaa")
+
+            $('#myForm').submit(function (event) {
+                event.preventDefault();
+                const form = $(this);
+                const formData = new FormData(form[0]);
+                
+                $.ajax({
+                    url: form.attr('action'),
+                    method: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+                    },
+                    success: function (data) {
+                        if (data.success) {
+                            alert('Car added successfully');
+                            window.location.href = "/";
+                        } else {
+                            alert('Failed to add car. Please try again.');
+                            // Handle errors if necessary
+                        }
+                    },
+                    error: function (error) {
+                        console.error('An error occurred:', error);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

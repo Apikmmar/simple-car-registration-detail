@@ -10,7 +10,7 @@
                 <div class="card shadow">
                     <div class="card-body">
                         <h2 class="card-title mb-4">Add Your Car</h2>
-                        <form action="" method="post" enctype="multipart/form-data" class="mt-5">
+                        <form id="myForm" action="" method="post" enctype="multipart/form-data" class="mt-5">
                             {% csrf_token %}
                             {{ form.car_brand.label_tag }}
                             {{ form.car_brand }}
@@ -33,7 +33,7 @@
                             {{ form.car_torque.label_tag }}
                             {{ form.car_torque }}
                             <br>
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success" id="submitted-form">Add Cars</button>
                             <button type="reset" class="btn btn-danger ml-2">Reset</button>
                         </form>                        
                     </div>
