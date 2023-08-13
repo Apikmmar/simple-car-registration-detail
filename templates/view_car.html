@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Car Details{% endblock %}
+
+{% block body %}
+    <h1>walauweii</h1>
+    <p>Car: {{ object.car_brand }} {{ object.car_model }}</p>
+    <p>Transmission: {{ object.car_transmission }}</p>
+    <p>Displacement: {{ object.car_cc }}</p>
+    <p>Color: {{ object.car_color }}</p>
+    <p>Horsepower: {{ object.car_hp }}</p>
+    <p>Torque: {{ object.car_torque }}</p>
+{% endblock %}

@@ -1,7 +1,5 @@
-from typing import Any
-from django import http
 from django.http import JsonResponse
-from django.views.generic import TemplateView, FormView
+from django.views.generic import TemplateView, FormView, DetailView
 
 from .forms import GetCar
 from .models import Car
@@ -31,3 +29,7 @@ class AddMyCar(FormView):
         )
 
         return JsonResponse({'success': True})
+    
+class GetCarDetail(DetailView):
+    template_name = "view_car.html"
+    model = Car

@@ -11,7 +11,7 @@
         <div class="row">
             {% for car in cars %}
             <div class="d-flex justify-content-center align-items-center m-3">
-                <button type="button" class="btn btn-success btn-lg" style="width: 300px;">{{ car.car_brand }} {{ car.car_model }}</button>
+                <a href="{% url 'mycarfeed:view_car' car.id %}" class="btn btn-success btn-lg" style="width: 300px;">{{ car.car_brand }} {{ car.car_model }}</a>
             </div>
                    
             {% endfor %}
